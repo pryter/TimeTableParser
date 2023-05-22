@@ -8,6 +8,8 @@ export function refine(data: TableBody ) {
             // Dust removal
             if (val.includes("|")) {
                 data[k][v] = []
+            }else{
+                data[k][v] = data[k][v].map((e) => (e.replace("|","")))
             }
         })
 
